@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :restaurants do
     # /restaurants/...
+    # collection do
+    #   post, to: "restaurants#new"
+    # end
     resources :reviews, only: %i[new create]
   end
 end
